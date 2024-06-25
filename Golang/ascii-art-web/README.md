@@ -4,7 +4,7 @@
 Ascii-Art-Web is a web application that allows users to generate ASCII art using different banners. It provides a graphical user interface (GUI) where users can input text, select a banner style, and generate the corresponding ASCII art. The application is built using Go and follows good coding practices.
 
 ## Authors
-- [Théo Ichane](https://zone01normandie.org/git/tichane)
+- [Théo Ichane](https://github.com/TheoIchane)
 - [Jaouhar Benromdhane](https://zone01normandie.org/git/jbenromd)
 - [Alexandre Casimir](https://zone01normandie.org/git/acasimir)
 
