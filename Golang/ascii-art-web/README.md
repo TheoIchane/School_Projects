@@ -55,7 +55,10 @@ The application uses predefined ASCII art banners (`shadow`, `standard`, `thinke
 
 2. **View the result**:
     - The generated ASCII art will be displayed on the same page or on a new page depending on the implementation.
-
+      
+3. **Export the result**:
+    - Click the 'Export' button to generate and download a txt file with the output.
+   
 ## Project Structure
 - `main.go`: The main Go file containing the HTTP server implementation.
 - `templates/`: Directory containing HTML templates for the web pages.
