@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Groupie Tracker</title>
+        <link rel="icon" href="/templates/stylesheets/img/icon.png">
+        <link rel="stylesheet" href="/templates/stylesheets/style.css">
+    </head>
+    <body class="error_body">
+        <div class="header" id="header">
+            <a href="http://localhost:8080/" class="icon"><img
+                    src="/templates/stylesheets/img/logo.png"
+                    alt="Groupie Tracker">
+            </a>
+            <div class="navi">
+                <a href="http://localhost:8080/" class="home"><img
+                        src="/templates/stylesheets/img/home.png"
+                        alt="Home">
+                </a>
+            </div>
+        </div>
+        <div class="content_error">
+            <h1 class="error">ERROR {{.Error}}</h1>
+            <h3 class="error_content">{{.Data}}</h3>
+        </div>
+    </body>
+</html>

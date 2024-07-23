@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Groupie Tracker</title>
+        <link rel="icon" href="/templates/stylesheets/img/icon.png">
+        <link rel="stylesheet" href="/templates/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="header" id="header">
+            <a href="http://localhost:8080/" class="icon"><img
+                    src="/templates/stylesheets/img/logo.png"
+                    alt="Groupie Tracker">
+            </a>
+            <div class="navi">
+                <a href="http://localhost:8080/artist/{{.Prev}}"
+                    class="page"><img src="/templates/stylesheets/img/Prev.png"
+                        alt="Prev"></a>
+                <a href="http://localhost:8080/artist/{{.Next}}"
+                    class="page"><img src="/templates/stylesheets/img/Next.png"
+                        alt="Next"></a>
+                <a href="http://localhost:8080/" class="home"><img
+                        src="/templates/stylesheets/img/home.png"
+                        alt="Home"></a>
+            </div>
+        </div>
+        <div class="contentA">
+            <div class="artistA">
+                <img src={{.Image}} alt={{.Name}}>
+                <div id="info">
+                    <h3>{{.Name}}</h3>
+                    <h5>Since {{.CreationDate}}</h5>
+                    <h4>First Album: {{.FirstAlbum}}</h4>
+                    <div class="menu">
+                        <ul class="groupe">
+                            <li id="test" class="menu-deroulant">
+                                <h4>Members:</h4>
+                                <ul class="sous-menu">
+                                    {{ range .Members}}
+                                    <li>• {{.}}</li>
+                                    {{end}}
+                                </ul>
+                            </li>
+                            <li class="menu-deroulant">
+                                <h4>Concerts Dates:</h4>
+                                <div class="sous-menu">
+                                    {{ range .Concerts}}
+                                    <div class="locations">
+                                        • {{.Locations}}
+                                        <ul class="dates">
+                                            {{range .Dates}}
+                                            <li>- {{.}}</li>
+                                            {{end}}
+                                        </ul>
+                                    </div>
+                                    {{end}}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/templates/stylesheets/header.js"></script>
+    </body>
+</html>
