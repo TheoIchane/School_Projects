@@ -16,6 +16,7 @@ func Data() {
 	go json.GetData(channel)
 	Artists = <-channel
 }
+
 func Home(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
 		Error(w, http.StatusNotFound )
@@ -43,16 +44,19 @@ func Error(w http.ResponseWriter, err int) {
 	data := map[string]interface{}{}
 	var content string
 	if err == 404 {
+		w.WriteHeader(http.StatusNotFound)
 		content = ": Page Not Found"
 		data["Error"] = "404"
 		data["Data"] = "Page Not Found"
 	} 
 	if err == 500 {
+		w.WriteHeader(http.StatusInternalServerError)
 		content = ": Something went wrong"
 		data["Error"] = "500"
 		data["Data"] = "Something went wrong"
 	}
 	if err == 400 {
+		w.WriteHeader(http.StatusBadRequest)
 		content = ": Bad Request"
 		data["Error"] = "400"
 		data["Data"] = "Bad Request"
@@ -75,7 +79,7 @@ func Artist(w http.ResponseWriter, r *http.Request) {
 	if id_int == 0 {
 		prev = 52
 	}
-	if id_int == 53 {
+	if id_int == 53 || next == 53 {
 		next = 1
 	}
 	data := map[string]interface{}{

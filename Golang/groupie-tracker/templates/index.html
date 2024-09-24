@@ -14,35 +14,27 @@
                     alt="Groupie Tracker">
             </a>
             <div class="navi">
-                <!-- <form method="get"><input type="text" name="search" id="search" placeholder="Search Here..." ></form> -->
                 <a href="http://localhost:8080/" class="home"><img
                         src="/templates/stylesheets/img/home.png"
                         alt="Home"></a>
             </div>
         </div>
-        <!-- <form method="post">
-        Sort:
-        <input type="radio" id="name" name="sort" value="name:asc" />
-        <label for="name">Name (ascending)</label>
-        <input type="radio" id="date" name="sort" value="date:asc" />
-        <label for="date" >Date (ascending)</label>
-        <input type="submit" value="Sort" />
-    </form> -->
-
-        <div class="content">
-
-            {{range .Artist}}
-            <a href="http://localhost:8080/artist/{{.Id}}">
-                <div class="artist">
-                    <div class="head">
-                        <p class="Name">{{.Name}}</p>
-                        <p class="text">{{.CreationDate}}</p>
+        <div class="main">
+            <div class="content">
+                {{range .Artist}}
+                <a href="http://localhost:8080/artist/{{.Id}}">
+                    <div class="artist">
+                        <div class="head">
+                            <p class="Name">{{.Name}}</p>
+                            <p class="text">{{.CreationDate}}</p>
+                        </div>
+                        <img src={{.Image}} alt={{.Name}}>
+                        <p class="copyright">© 2024 | zone01 |
+                            Groupie-Tracker</p>
                     </div>
-                    <img src={{.Image}} alt={{.Name}}>
-                    <p class="copyright">© 2024 | zone01 | Groupie-Tracker</p>
-                </div>
-            </a>
-            {{end}}
+                </a>
+                {{end}}
+            </div>
         </div>
         <script src="/templates/stylesheets/header.js"></script>
     </body>

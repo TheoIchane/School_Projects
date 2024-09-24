@@ -51,7 +51,7 @@ z-index: 1;
 .intro-text{
   font-family: myFont1;
   color : #ffffff;
-  font-size:10vw;
+  font-size:7vw;
 }
 
 .Error{
@@ -73,7 +73,7 @@ canvas {
 }
 .Text {
   color : #ffffff; 
-  font-size: 4vw; 
+  font-size: 2vw; 
 }
 
 .submit {

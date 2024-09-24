@@ -25,4 +25,4 @@ You can easily switch from one band to another by clicking on the "Previous" or 
 ## Authors
 - [Theo Ichane](https://github.com/TheoIchane)
 - [Alexandre Casimir](https://github.com/Alkzim974)
-- [Jaouhar Benromdane](https://github.com/)
+- [Jaouhar Benromdane](https://github.com/Jaouhar-benromdhane)
