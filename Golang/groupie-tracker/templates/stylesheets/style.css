@@ -11,6 +11,10 @@
   font-family: "Che";
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root{
   --hauteur-menu: 60px;
 }
